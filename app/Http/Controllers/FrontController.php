@@ -12,9 +12,9 @@ class FrontController extends Controller
         $search = $request->input('os');
         if($search):
             $showsearch = $support->where('ordem', '=' , $search)->get();
-            return view('welcome', compact('showsearch'));
+            return view('front.home.index', compact('showsearch'));
         else:
-            return view('welcome');
+            return view('front.home.index');
         endif;
     }
 
